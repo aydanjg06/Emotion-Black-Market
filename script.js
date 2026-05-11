@@ -57,11 +57,10 @@ const products = [
   },
   {
     id: 8,
-    name: "Your Choice",
-    category: "All",
+    name: "Fear",
+    category: "Fear",
     price: 49.99,
-    image: "assets/Your choice potion.png",
-    desc: "Create your own emotion."
+    image: "assets/Your choice potion.png"
   }
 ];
 

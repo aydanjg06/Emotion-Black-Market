@@ -12,7 +12,6 @@
   --gold-soft: rgba(243, 201, 122, 0.2);
   --text: #ffffff;
   --muted: #cfcfcf;
-  --card: rgba(0, 0, 0, 0.72);
 }
 
 body {
@@ -95,7 +94,6 @@ nav {
   border: none;
   color: var(--text);
   font-size: 0.88rem;
-  letter-spacing: 0.5px;
   transition: 0.25s;
 }
 
@@ -148,9 +146,12 @@ nav {
 }
 
 .bg-page {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.82)),
-    url("assets/Achtergrond voor lege paginas.png") center/cover fixed;
+  background-image: url("assets/Achtergrond voor lege paginas.png");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: #000;
 }
 
 .home-page {
@@ -193,7 +194,6 @@ nav {
   width: 42%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .hero-image img {
@@ -209,7 +209,6 @@ nav {
   padding: 17px 34px;
   border-radius: 9px;
   font-size: 1rem;
-  letter-spacing: 0.5px;
   transition: 0.25s;
 }
 
@@ -372,10 +371,6 @@ nav {
   margin-top: 8px;
 }
 
-.shop-header label {
-  color: var(--muted);
-}
-
 .shop-header select,
 .payment-page select {
   background: #000;
@@ -452,7 +447,7 @@ nav {
 .about-page {
   background:
     linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.65)),
-    url("assets/About pagina.png") center/cover fixed;
+    url("assets/About pagina.png") center / cover no-repeat fixed;
 }
 
 .about-text {
@@ -472,7 +467,6 @@ nav {
 .about-text p {
   line-height: 1.8;
   margin-bottom: 18px;
-  color: #f1f1f1;
 }
 
 .about-icons {
@@ -484,7 +478,6 @@ nav {
 
 .about-icons div {
   text-align: center;
-  padding: 10px;
 }
 
 .about-icons img {
@@ -500,7 +493,6 @@ nav {
 }
 
 .about-icons span {
-  display: block;
   color: var(--muted);
   font-size: 0.92rem;
 }
@@ -522,12 +514,6 @@ nav {
   margin-bottom: 18px;
 }
 
-.contact-box > p,
-.ar-box > p {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
 .contact-info {
   margin: 28px 0;
   display: flex;
@@ -541,12 +527,6 @@ nav {
   gap: 18px;
 }
 
-.form label {
-  text-align: left;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .form input,
 .form textarea,
 .payment-page input {
@@ -554,12 +534,10 @@ nav {
   border: 1px solid var(--gold);
   color: var(--text);
   padding: 15px;
-  border-radius: 3px;
 }
 
 .form textarea {
   min-height: 145px;
-  resize: vertical;
 }
 
 .qr-placeholder {
@@ -571,7 +549,6 @@ nav {
   align-items: center;
   justify-content: center;
   font-size: 6.5rem;
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .large-text {
@@ -586,19 +563,11 @@ nav {
 .wishlist-page h2 {
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   margin-bottom: 42px;
-  text-align: center;
 }
 
 .settings-group {
   width: min(430px, 100%);
   margin-bottom: 38px;
-}
-
-.settings-group h3,
-.option-card h3,
-.accessibility-panel h4 {
-  margin-bottom: 16px;
-  color: var(--text);
 }
 
 .settings-group button,
@@ -611,12 +580,6 @@ nav {
   color: var(--text);
   text-align: left;
   font-size: 1rem;
-}
-
-.settings-group button:hover,
-.setting-link:hover,
-.option-card button:hover {
-  background: rgba(168, 85, 247, 0.15);
 }
 
 .back {
@@ -634,16 +597,6 @@ nav {
   margin: 0 auto;
 }
 
-.accessibility-panel p,
-.color-options p {
-  color: var(--muted);
-  margin-bottom: 25px;
-}
-
-.accessibility-panel h4 {
-  margin-top: 28px;
-}
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -653,19 +606,10 @@ nav {
   border-bottom: 1px solid var(--gold-soft);
 }
 
-.row button {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--gold);
-  background: #000;
-  color: white;
-}
-
 .switch {
   position: relative;
   width: 52px;
   height: 27px;
-  flex-shrink: 0;
 }
 
 .switch input {
@@ -702,16 +646,13 @@ nav {
 .color-options label {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 8px;
   padding: 18px 0;
   border-bottom: 1px solid var(--gold-soft);
 }
 
 .color-options span {
-  display: block;
   color: var(--muted);
   font-size: 0.9rem;
-  grid-column: 1;
 }
 
 .checkout-item,
@@ -732,18 +673,6 @@ nav {
   object-fit: contain;
 }
 
-.checkout-item p,
-.wishlist-item p {
-  color: var(--muted);
-  margin-top: 6px;
-}
-
-.checkout-item button {
-  background: none;
-  border: none;
-  color: var(--muted);
-}
-
 .summary {
   width: min(520px, 100%);
   margin: 45px 0;
@@ -752,7 +681,8 @@ nav {
   border-bottom: 1px solid var(--gold);
 }
 
-.summary div {
+.summary div,
+.order-summary div {
   display: flex;
   justify-content: space-between;
   margin-bottom: 14px;
@@ -766,24 +696,13 @@ nav {
   display: grid;
   grid-template-columns: minmax(300px, 440px) minmax(300px, 430px);
   gap: 90px;
-  align-items: start;
 }
 
-.billing-form {
+.billing-form,
+.payment-side {
   display: flex;
   flex-direction: column;
   gap: 13px;
-}
-
-.billing-form h3,
-.payment-side h3 {
-  margin-bottom: 10px;
-}
-
-.billing-form label,
-.payment-side label {
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 .phone-row {
@@ -792,16 +711,9 @@ nav {
   gap: 10px;
 }
 
-.payment-side {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
 .payment-logos {
   display: flex;
   gap: 15px;
-  align-items: center;
 }
 
 .payment-logos img {
@@ -817,12 +729,6 @@ nav {
   border: 1px solid var(--gold);
   padding: 22px;
   background: rgba(0, 0, 0, 0.55);
-}
-
-.order-summary div {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 14px;
 }
 
 .wishlist-grid {
@@ -851,11 +757,6 @@ nav {
   border: 1px solid var(--purple);
   padding: 38px;
   position: relative;
-  box-shadow: 0 0 40px rgba(168, 85, 247, 0.35);
-}
-
-.modal-box h2 {
-  font-size: 3rem;
 }
 
 .modal-box input {
@@ -877,16 +778,6 @@ nav {
   right: 20px;
 }
 
-.search-result {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--gold-soft);
-  cursor: pointer;
-}
-
-.search-result:hover {
-  color: var(--purple);
-}
-
 .cart-drawer {
   position: fixed;
   top: 0;
@@ -898,16 +789,10 @@ nav {
   padding: 38px;
   transition: 0.35s;
   z-index: 5000;
-  overflow-y: auto;
 }
 
 .cart-drawer.open {
   right: 0;
-}
-
-.cart-drawer h2 {
-  font-size: 3rem;
-  margin-bottom: 35px;
 }
 
 .cart-item {
@@ -922,17 +807,6 @@ nav {
   width: 70px;
   height: 85px;
   object-fit: contain;
-}
-
-.cart-item p {
-  color: var(--muted);
-  margin: 5px 0;
-}
-
-.cart-item button {
-  background: none;
-  color: #fff;
-  border: none;
 }
 
 .cart-total {
@@ -952,29 +826,30 @@ nav {
   justify-content: center;
 }
 
-.toast::before {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 245px;
+.toast-box {
+  width: 420px;
+  min-height: 240px;
   background: rgba(168, 85, 247, 0.92);
   border-radius: 9px;
   box-shadow: 0 0 40px rgba(168, 85, 247, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  text-align: center;
+  padding: 35px;
 }
 
 .toast .check {
-  position: relative;
-  z-index: 1;
   font-size: 5rem;
-  margin-bottom: 70px;
+  line-height: 1;
 }
 
 .toast p {
-  position: absolute;
-  z-index: 1;
-  margin-top: 85px;
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 1.6rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 1100px) {
@@ -1011,7 +886,6 @@ nav {
 
   .payment-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 }
 
@@ -1029,10 +903,6 @@ nav {
     padding: 28px 20px;
   }
 
-  .nav-icons {
-    gap: 10px;
-  }
-
   .about-icons,
   .benefits {
     grid-template-columns: 1fr;
@@ -1044,17 +914,6 @@ nav {
 
   .product-grid {
     grid-template-columns: 1fr;
-  }
-
-  .checkout-item,
-  .wishlist-item {
-    grid-template-columns: 90px 1fr;
-  }
-
-  .checkout-item strong,
-  .checkout-item button,
-  .wishlist-item button {
-    grid-column: 2;
   }
 
   .cart-drawer {
